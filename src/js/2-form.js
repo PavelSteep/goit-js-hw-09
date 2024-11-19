@@ -6,7 +6,6 @@ const formData = {
   message: "",
 };
 
-// Селекторы элементов формы
 const form = document.querySelector('.feedback-form');
 const emailInput = form.querySelector('input[name="email"]');
 const messageTextarea = form.querySelector('textarea[name="message"]');
@@ -22,7 +21,7 @@ function saveToLocalStorage() {
 // Функция для обновления объекта formData и localStorage
 function handleInput(event) {
   const { name, value } = event.target;
-  formData[name] = value.trim(); // Удаляем пробелы по краям
+  formData[name] = value.trim();
   saveToLocalStorage();
 }
 
@@ -31,8 +30,8 @@ function loadFromLocalStorage() {
   const savedData = localStorage.getItem(STORAGE_KEY);
   if (savedData) {
     const parsedData = JSON.parse(savedData);
-    formData.email = parsedData.email || ""; // Защита от undefined
-    formData.message = parsedData.message || ""; // Защита от undefined
+    formData.email = parsedData.email || "";
+    formData.message = parsedData.message || "";
 
     // Заполняем поля формы
     emailInput.value = formData.email;
@@ -50,7 +49,6 @@ function handleSubmit(event) {
     return;
   }
 
-  // Логируем данные в консоль
   console.log('Submitted formData:', formData);
 
   // Очищаем форму, объект formData и localStorage

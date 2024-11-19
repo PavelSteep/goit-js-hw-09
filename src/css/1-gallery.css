@@ -45,7 +45,7 @@ img {
   display: grid;
   gap: 24px;
   padding: 40px 24px;
-  grid-template-columns: 1fr; /* По умолчанию одна колонка */
+  grid-template-columns: 1fr;
 }
 
 .gallery-item {
@@ -60,15 +60,15 @@ img {
   object-fit: cover;
 }
 
-/* Адаптивная сетка */
+
 @media screen and (min-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr); /* Три колонки */
+    grid-template-columns: repeat(3, 1fr);
   }
 }

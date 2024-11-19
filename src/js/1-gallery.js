@@ -89,8 +89,8 @@ galleryEl.insertAdjacentHTML('beforeend', galleryMarkup);
 
 // Инициализируем SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt', // Используем атрибут alt как источник подписей
-  captionDelay: 250, // Задержка 250 мс
+  captionsData: 'alt',
+  captionDelay: 250,
 });
 
 
