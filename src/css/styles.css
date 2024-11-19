@@ -15,4 +15,6 @@
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
+@import url('./1-gallery.css'); /* Добавлено подключение для галереи */
+@import url('./2-form.css'); /* Добавлено подключение для галереи */
 @import url('./footer.css');
